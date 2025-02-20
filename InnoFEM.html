@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Requirements Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 450px;
+        }
+        .form-container h2 {
+            margin-bottom: 45px;
+            font-size: 35px;
+            color: #333;
+            text-align: center;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-container input[type="text"],
+        .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .form-container textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Enter Your Requirements</h2>
+        <form action="/submit-requirements" method="POST">
+            <!-- Job Title -->
+            <label for="jobTitle">Job Title:</label>
+            <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g., Software Engineer" required>
+
+            <!-- Required Skills -->
+            <label for="skills">Required Skills:</label>
+            <textarea id="skills" name="skills" placeholder="e.g., Python, Java, Communication" required></textarea>
+
+            <!-- Experience -->
+            <label for="experience">Experience :</label>
+            <input type="text" id="experience" name="experience" placeholder="e.g., Technical skills" required>
+
+            <!-- Acadamic Background -->
+            <label for="acadamicbackground">Acadamic Background:</label>
+            <input type="text" id="acadamicbackground" name="acadamicbackground" placeholder="e.g., Bachelor's degree" required>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Requirements">
+        </form>
+    </div>
+</body>
+</html>
